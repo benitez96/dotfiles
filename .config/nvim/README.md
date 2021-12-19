@@ -4,6 +4,8 @@
 - [🇪🇸 Español](./README.es.md)
 - 🇺🇸 English
 
+THIS REPO IS BASED ON Antonio Sarosi's project
+visit him: https://github.com/antoniosarosi
 
 To use this config, first download some dependencies:
 
@@ -56,8 +58,8 @@ This are some keybingins besides default ones:
 
 | Key           | Action                                        |
 | ------------- | --------------------------------------------- |
-| **space + f** | Fuzzy search                                  |
-| **space + /** | Comment selected line or block                |
-| **space + n** | Toggle NerdTree                               |
-| **space + p** | Format document with prettier                 |
+| **, + f** | Fuzzy search                                  |
+| **, + /** | Comment selected line or block                |
+| **, + n** | Toggle NerdTree                               |
+| **, + p** | Format document with prettier                 |
 | **shift + k** | Function or class documentation and arg types |

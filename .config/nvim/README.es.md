@@ -56,8 +56,8 @@ defecto:
 
 | Atajo         | Acción                                  |
 | ------------- | --------------------------------------- |
-| **space + f** | Búsqueda                                |
-| **space + /** | Comentar la línea o bloque seleccionado |
-| **space + n** | NerdTree                                |
-| **space + p** | Formatear documento con prettier        |
+| **, + f** | Búsqueda                                |
+| **, + /** | Comentar la línea o bloque seleccionado |
+| **, + n** | NerdTree                                |
+| **, + p** | Formatear documento con prettier        |
 | **shift + k** | Documentación de la función o clase     |
