@@ -1,0 +1,215 @@
+
+snippet rfc "function component export (with prop interface)" b
+
+interface Props {
+	$3
+}
+
+export const ${1:`!v expand('%:t:r')`} = ({ ${2:props} }: Props) => {
+	return (
+		<>
+			$1
+		</> 
+	)
+}
+endsnippet
+
+# ==========================================
+# Hooks
+#
+
+snippet us.s "useState" w
+const [$1, set${1/\w+\s*/\u$0/g}] = useState(${3:''})${0:;}
+endsnippet
+
+snippet us.e "useEffect" w
+useEffect(() => {
+  $1
+})${0:;}
+endsnippet
+
+snippet us.er "useEffect with return" w
+useEffect(() => {
+  $1
+  return () => {
+	$2
+	};
+})${0:;}
+endsnippet
+
+snippet us.c "useContext" w
+const $1 = useContext($2)${0:;}
+endsnippet
+
+snippet us.r "useReducer" w
+const [$1, dispatch] = useReducer($1Reducer, ${2:${VISUAL:initialState}})
+const $1Reducer = (state, action) => {
+	switch (action.type) {
+		default:
+			return state;
+	}
+}${0:;}
+endsnippet
+
+snippet us.cb "useCallback" w
+useCallback(
+	() => {
+		$1
+	},
+	[$2],
+)${0:;}
+endsnippet
+
+snippet us.m "useMemo" w
+const $1 = useMemo(() => {
+	$2
+}, [$3])${0:;}
+endsnippet
+
+snippet us.rf "useRef" w
+const $1 = useRef($2)${0:;}
+endsnippet
+
+
+# ==========================================
+# PropTypes
+# 
+
+snippet pt "PropTypes Definition" b
+${1:`!v expand('%:t:r')`.}propTypes = {
+	${2:className}: ${3:PropTypes.string},
+};
+endsnippet
+
+snippet  pt.a "PropTypes Array" w
+PropTypes.array${1:,}
+endsnippet
+
+snippet   pt.b "PropTypes Boolean" w
+PropTypes.bool${1:,}
+endsnippet
+
+snippet pt.f "PropTypes Function" w
+PropTypes.func${1:,}
+endsnippet
+
+snippet pt.n "PropTypes Number" w
+PropTypes.number${1:,}
+endsnippet
+
+snippet pt.o "PropTypes Object" w
+PropTypes.object${1:,}
+endsnippet
+
+snippet pt.s "PropType String" w
+PropTypes.string${1:,}
+endsnippet
+
+snippet pt.no "PropTypes Node" w
+PropTypes.node${1:,}
+endsnippet
+
+snippet pt.e "PropTypes Element" w
+PropTypes.element${1:,}
+endsnippet
+
+snippet pt.io "PropTypes instanceOf" w
+PropTypes.instanceOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.one "PropTypes oneOf" w
+PropTypes.oneOf(['$2'$3])${1:,}
+endsnippet
+
+snippet pt.onet "PropTypes oneOfType" w
+PropTypes.oneOfType([
+	$2
+])${1:,}
+endsnippet
+
+snippet pt.ao "PropTypes arrayOf" w
+PropTypes.arrayOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.oo "PropTypes objectOf" w
+PropTypes.objectOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.sh "PropTyes Shape" w
+PropTypes.shape({
+	$2
+})${1:,}
+endsnippet
+
+snippet ir "isRequired" w
+isRequired,
+endsnippet
+
+# ==========================================
+# Test Snippets
+#
+snippet rtf "React Test File" b
+import { render } from "@testing-library/react"
+
+import { ${1:`!v expand('%:t:r')`} } from "../$1"
+
+describe("$1", () => {
+	it("should $2", () => {
+		$3
+	})
+})
+endsnippet
+
+snippet desc "describe a test" b
+describe("$1", () => {
+	it("should $2", () => {
+		$3
+	})
+})
+endsnippet
+
+snippet it "create a test block" b
+it("should $1", () => {
+	$2
+})
+endsnippet
+
+snippet ait "create an async test block" b
+it('should $1', async () => {
+	$2
+})
+endsnippet
+
+snippet todo "it.todo()" b
+it.todo("should $1")
+endsnippet
+
+snippet es "expect(container).toMatchSnapshot()" b
+expect(${1:container}).toMatchSnapshot()$0
+endsnippet
+
+snippet intf "create interface for file" b
+export interface ${1:`!v expand('%:t:r')`}$2 {
+	$0
+}
+endsnippet
+
+
+
+
+# ==========================================
+# Plain javascript
+#
+
+
+snippet cl "console.log" w
+console.log('$1:', $1)
+endsnippet
+
+
+snippet cf "const function" w
+const $1 = ($2) => {
+	$3
+}
+endsnippet
+
