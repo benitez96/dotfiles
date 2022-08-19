@@ -32,6 +32,14 @@ local on_attach = function(client, bufnr)
       callback = function() vim.lsp.buf.formatting_seq_sync() end
     })
   end
+
+  -- colors
+  if client.server_capabilities.colorProvider then
+    -- Attach document colour support
+    require("document-color").buf_attach(bufnr)
+  end
+
+
 end
 
 protocol.CompletionItemKind = {
@@ -67,6 +75,8 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+capabilities.textDocument.colorProvider = true
+
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -101,7 +111,12 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.pylsp.setup {}
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

@@ -35,7 +35,15 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'jiangmiao/auto-pairs'
   use 'windwp/nvim-ts-autotag'
+  -- colors
   use 'norcalli/nvim-colorizer.lua'
+  use { 'mrshmllow/document-color.nvim', config = function()
+    require("document-color").setup {
+      -- Default options
+      mode = "background", -- "background" | "foreground" | "single"
+    }
+  end
+  }
   use 'folke/zen-mode.nvim'
   use({
     "iamcco/markdown-preview.nvim",
@@ -48,6 +56,7 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'tpope/vim-surround'
+  use 'tpope/vim-commentary'
 
 
 end)
