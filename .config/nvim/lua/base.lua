@@ -33,6 +33,29 @@ vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 
+
+-- Insesitive when closing
+vim.cmd([[cnoreabbrev W! w!]])
+vim.cmd([[cnoreabbrev Q! q!]])
+vim.cmd([[cnoreabbrev Qall! qall!]])
+vim.cmd([[cnoreabbrev Wq wq]])
+vim.cmd([[cnoreabbrev Wa wa]])
+vim.cmd([[cnoreabbrev wQ wq]])
+vim.cmd([[cnoreabbrev WQ wq]])
+vim.cmd([[cnoreabbrev W w]])
+vim.cmd([[cnoreabbrev Q q]])
+vim.cmd([[cnoreabbrev Qall qall]])
+
+-- Save and close files
+vim.cmd([[nnoremap <C-s> :w<CR>]])
+vim.cmd([[nnoremap <C-q> :wq!<CR>]])
+
+
+-- Move visual block
+vim.cmd([[vnoremap J :m '>+1<CR>gv=gv]])
+vim.cmd([[vnoremap K :m '<-2<CR>gv=gv]])
+
+
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
