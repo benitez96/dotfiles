@@ -55,6 +55,9 @@ vim.cmd([[nnoremap <C-q> :wq!<CR>]])
 vim.cmd([[vnoremap J :m '>+1<CR>gv=gv]])
 vim.cmd([[vnoremap K :m '<-2<CR>gv=gv]])
 
+-- Vmap for maintain Visual Mode after shifting > and <
+vim.cmd([[vmap < <gv]])
+vim.cmd([[vmap > >gv]])
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
