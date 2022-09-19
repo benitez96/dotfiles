@@ -4,6 +4,12 @@ if (not status) then return end
 saga.init_lsp_saga {
   server_filetype_map = {
     typescript = { 'typescript' },
+  },
+
+  finder_action_keys = {
+    vsplit = "v",
+    split = "s",
+    tabe = "<C-t>",
   }
 }
 
