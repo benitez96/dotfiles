@@ -50,7 +50,7 @@ picom &
 xsettingsd &
 
 # wallpaper
-feh --bg-scale wallpapers/02.jpg &
+feh --bg-scale wallpapers/01.jpg &
 
 # Export
 export VISUAL=nvim
