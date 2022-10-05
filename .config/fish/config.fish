@@ -13,3 +13,7 @@ alias pgcli='python -m pgcli'
 alias s='shutdown now'
 alias r='reboot'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
