@@ -1,5 +1,6 @@
 
 alias ls='exa --group-directories-first'
+alias lf='ranger'
 alias grep='grep --color=auto'
 alias tree='exa -T'
 alias cat='ccat -G Plaintext="blink" -G Keyword="purple" -G String="darkgreen" -G Punctuation="brown" -G Comment="faint"'
@@ -7,6 +8,7 @@ alias battery="upower -i `upower -e | grep BAT` | grep percentage | sed 's/ * / 
 
 alias vim='nvim'
 alias v='nvim'
+alias py='python3'
 
 alias pgcli='python -m pgcli'
 
