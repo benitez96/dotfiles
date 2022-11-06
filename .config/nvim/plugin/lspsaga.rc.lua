@@ -2,15 +2,15 @@ local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
 saga.init_lsp_saga {
-  server_filetype_map = {
-    typescript = { 'typescript' },
-  },
+	server_filetype_map = {
+		typescript = { 'typescript', 'html' },
+	},
 
-  finder_action_keys = {
-    vsplit = "v",
-    split = "s",
-    tabe = "<C-t>",
-  }
+	finder_action_keys = {
+		vsplit = "v",
+		split = "s",
+		tabe = "<C-t>",
+	}
 }
 
 local opts = { noremap = true, silent = true }
