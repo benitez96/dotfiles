@@ -34,6 +34,8 @@ packer.startup(function(use)
 	use 'glepnir/lspsaga.nvim' -- LSP UIs
 	use 'L3MON4D3/LuaSnip'
 	use "rafamadriz/friendly-snippets"
+	use "saadparwaiz1/cmp_luasnip"
+
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
